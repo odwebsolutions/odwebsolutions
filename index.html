@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OD Web Solutions — Modern Websites for Scottish Businesses</title>
+    <meta
+      name="description"
+      content="OD Web Solutions designs fast, modern, conversion-focused websites for local businesses across Scotland. Free quotes, 7-day turnarounds, premium results."
+    />
+    <meta name="author" content="OD Web Solutions" />
+    <meta property="og:title" content="OD Web Solutions · Web Design Scotland" />
+    <meta
+      property="og:description"
+      content="Premium, mobile-first websites that turn visitors into customers. Built in Scotland."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ODWebSolutions" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      NETLIFY FORMS DETECTION ONLY — do not remove.
+
+      This site is a single-page app: the real, working forms live inside the
+      React code and only appear once JavaScript runs in the visitor's
+      browser. Netlify's form-detection bot only reads the plain HTML that's
+      already in this file when it builds the site — it never runs JavaScript.
+
+      So these two hidden forms exist purely to give Netlify something to
+      "see" during the build, with the exact same name + field names as the
+      real forms. That's what registers them in Site settings > Forms and
+      makes email notifications + the multipart/form-data file uploads work.
+      They are never shown to visitors (display:none) and visitors never
+      interact with them — the real forms in the React app are what actually
+      gets submitted.
+    -->
+    <div style="display: none">
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="bot-field" />
+        <input type="text" name="name" />
+        <input type="text" name="business" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+
+      <form
+        name="client-information"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        netlify-honeypot="bot-field"
+        enctype="multipart/form-data"
+      >
+        <input type="hidden" name="form-name" value="client-information" />
+        <input type="text" name="bot-field" />
+        <input type="text" name="business-name" />
+        <input type="text" name="business-owner" />
+        <input type="email" name="owner-email" />
+        <input type="tel" name="phone" />
+        <textarea name="business-address"></textarea>
+        <textarea name="opening-hours"></textarea>
+        <input type="text" name="areas-covered" />
+        <input type="text" name="owns-domain" />
+        <input type="text" name="domain-provider" />
+        <input type="email" name="domain-login-email" />
+        <textarea name="domain-notes"></textarea>
+        <textarea name="business-description"></textarea>
+        <textarea name="services-list"></textarea>
+        <textarea name="usp"></textarea>
+        <input type="file" name="logo" />
+        <input type="text" name="brand-colours" />
+        <input type="text" name="preferred-fonts" />
+        <textarea name="inspiration-sites"></textarea>
+        <input type="file" name="photos-business" multiple />
+        <input type="file" name="photos-team" multiple />
+        <input type="file" name="photos-work" multiple />
+        <input type="file" name="photos-before-after" multiple />
+        <input type="file" name="photos-van" multiple />
+        <input type="file" name="photos-certificates" multiple />
+        <input type="file" name="photos-other" multiple />
+        <textarea name="google-reviews"></textarea>
+        <textarea name="facebook-reviews"></textarea>
+        <textarea name="other-testimonials"></textarea>
+        <input type="url" name="social-facebook" />
+        <input type="url" name="social-instagram" />
+        <input type="url" name="social-tiktok" />
+        <input type="url" name="social-linkedin" />
+        <input type="url" name="social-youtube" />
+        <input type="email" name="enquiry-email" />
+        <textarea name="additional-info"></textarea>
+        <input type="checkbox" name="agreement" value="agreed" />
+      </form>
+    </div>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

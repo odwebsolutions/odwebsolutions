@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Client-side routing fallback: without this, refreshing /client-form or
+# /privacy-policy directly (or someone linking straight to them) gives a 404,
+# because those pages don't exist as real files — only index.html does, and
+# the app's router takes over from there.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
