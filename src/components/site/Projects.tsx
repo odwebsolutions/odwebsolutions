@@ -42,17 +42,17 @@ export function Projects() {
               Recent projects built <br />for Scottish businesses.
             </h2>
           </div>
-          
+          <a
             href="#contact"
             className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-brand transition-colors"
           >
-            Start your project ->
+            Start your project →
           </a>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
-            
+            <a
               key={i}
               href={p.url}
               target="_blank"
