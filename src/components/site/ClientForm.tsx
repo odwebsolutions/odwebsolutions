@@ -137,7 +137,7 @@ export function ClientForm() {
       }
     } catch {
       alert(
-        "Something went wrong submitting the form. Please try again or email us at hello@odwebsolutions.co.uk"
+        "Something went wrong submitting the form. Please try again or email us at odwebsolutions1@gmail.com"
       );
     } finally {
       setSubmitting(false);
