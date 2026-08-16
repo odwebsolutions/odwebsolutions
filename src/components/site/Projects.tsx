@@ -46,7 +46,7 @@ export function Projects() {
             href="#contact"
             className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-brand transition-colors"
           >
-            Start your project →
+            Start your project ->
           </a>
         </div>
 
