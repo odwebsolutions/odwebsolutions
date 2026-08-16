@@ -1,10 +1,6 @@
-import p1Asset from "@/assets/p1.png.asset.json";
-import p2Asset from "@/assets/p2.png.asset.json";
-import p3Asset from "@/assets/p3.png.asset.json";
-
-const p1 = p1Asset.url;
-const p2 = p2Asset.url;
-const p3 = p3Asset.url;
+import p1 from "@/assets/p1.png";
+import p2 from "@/assets/p2.png";
+import p3 from "@/assets/p3.png";
 
 const projects = [
   {
@@ -13,7 +9,7 @@ const projects = [
     title: "Northside Edge Barbers",
     desc: "Concept website design for a modern Edinburgh barber — dark editorial layout with online booking and a focus on premium brand feel.",
     meta: ["Edinburgh", "Concept", "Booking"],
-    url: "#contact",
+    url: "https://northside-barbers-vibe.lovable.app/",
   },
   {
     img: p2,
@@ -21,7 +17,7 @@ const projects = [
     title: "Iron District Gym",
     desc: "Concept website design for a high-end performance gym — cinematic hero, clear membership tiers and a confident, masculine identity.",
     meta: ["Edinburgh", "Concept", "Memberships"],
-    url: "#contact",
+    url: "https://northside-edinburgh-style.lovable.app/",
   },
   {
     img: p3,
@@ -46,7 +42,7 @@ export function Projects() {
               Recent projects built <br />for Scottish businesses.
             </h2>
           </div>
-          <a
+          
             href="#contact"
             className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-brand transition-colors"
           >
@@ -56,7 +52,7 @@ export function Projects() {
 
         <div className="grid lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
-            <a
+            
               key={i}
               href={p.url}
               target="_blank"
