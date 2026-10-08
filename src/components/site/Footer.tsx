@@ -85,10 +85,10 @@ export function Footer() {
         <div className="border-t border-white/10 pt-6 mt-2 flex flex-col md:flex-row justify-between gap-4 text-xs text-white/40">
           <div>© {new Date().getFullYear()} OD Web Solutions · All rights reserved.</div>
           <div className="flex gap-5">
-            <Link to="/privacy-policy" className="hover:text-brand">Privacy</Link>
-            <a href="#" className="hover:text-brand">Terms</a>
-            <a href="#contact" className="hover:text-brand">Contact</a>
-          </div>
+  <Link to="/privacy-policy" className="hover:text-brand">Privacy</Link>
+  <Link to="/cookie-policy" className="hover:text-brand">Cookies</Link>
+  <a href="#contact" className="hover:text-brand">Contact</a>
+</div>
         </div>
       </div>
     </footer>
