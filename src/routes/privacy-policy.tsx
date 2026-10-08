@@ -6,23 +6,31 @@ export const Route = createFileRoute("/privacy-policy")({
   component: PrivacyPolicyPage,
   head: () => ({
     meta: [
-      { title: "Privacy & Cookies Policy — OD Web Solutions" },
+      { title: "Privacy Policy — OD Web Solutions" },
       {
         name: "description",
         content:
-          "How OD Web Solutions collects, uses and protects information submitted through this website.",
+          "Privacy Policy explaining how OD Web Solutions collects, uses and protects personal information.",
       },
     ],
   }),
 });
 
-function Section({ title, children }: { title: string; children: React.ReactNode }) {
+function Section({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
   return (
     <div className="mb-10">
       <h2 className="font-display font-semibold text-xl text-white mb-3 tracking-tight">
         {title}
       </h2>
-      <div className="text-white/65 leading-relaxed text-sm space-y-3">{children}</div>
+      <div className="text-white/65 leading-relaxed text-sm space-y-3">
+        {children}
+      </div>
     </div>
   );
 }
@@ -31,148 +39,267 @@ function PrivacyPolicyPage() {
   return (
     <main className="bg-ink-deep text-foreground overflow-x-hidden">
       <Nav />
+
       <div className="pt-36 pb-24 px-5 lg:px-10">
         <div className="max-w-3xl mx-auto">
           <h1 className="font-display font-semibold text-4xl md:text-5xl text-white leading-[1.05] tracking-tight mb-4">
-            Privacy &amp; Cookies Policy
+            Privacy Policy
           </h1>
-          <p className="text-white/50 text-sm mb-4">Last updated: [add the date you publish this]</p>
 
-          <div className="bg-brand/10 border border-brand/30 rounded-xl p-5 mb-10 text-sm text-white/70 leading-relaxed">
-            <strong className="text-brand">Before you publish this:</strong> this page is a
-            plain-English starting template, not legal advice. Replace the
-            bracketed placeholders with your real details, and it's worth a
-            quick check against the UK ICO's guidance (or a solicitor) before
-            it goes live, since data protection rules apply to you as a
-            business collecting customer and website-visitor information.
-          </div>
+          <p className="text-white/50 text-sm mb-10">
+            Last updated: 6 October 2026
+          </p>
 
           <Section title="Who we are">
             <p>
               OD Web Solutions ("we", "us", "our") is a web design business
-              based in Scotland. If you have any questions about this policy
-              or your information, contact us at{" "}
-              <a href="mailto:odwebsolutions1@gmail.com" className="text-brand underline">
+              based in Scotland.
+            </p>
+
+            <p>
+              If you have any questions about this Privacy Policy or how we
+              handle your personal information, you can contact us at{" "}
+              <a
+                href="mailto:odwebsolutions1@gmail.com"
+                className="text-brand underline"
+              >
                 odwebsolutions1@gmail.com
               </a>
               .
             </p>
           </Section>
 
-          <Section title="What information we collect">
+          <Section title="Information we collect">
             <p>
-              <strong className="text-white/80">When you use the Enquiry form:</strong> your
-              name, business name, email address and the message you send us.
+              We may collect personal information that you choose to provide
+              when contacting us or using forms on our website.
             </p>
+
             <p>
-              <strong className="text-white/80">When you use the Client Information form:</strong>{" "}
-              business details, contact details, domain/hosting information,
-              branding preferences, any images, logos or files you upload,
-              and any reviews or testimonials you paste in. This is
-              information you choose to give us so we can build your website.
+              This may include your name, business name, email address, phone
+              number, and the contents of any enquiry or message you send us.
             </p>
+
             <p>
-              <strong className="text-white/80">Automatically:</strong> we don't run analytics
-              or tracking cookies on this site unless stated otherwise below.
-              If that changes, this section will be updated and you'll be
-              asked for consent via the cookie banner.
+              If you use our Client Information form to provide information
+              needed for a website project, this may also include business
+              information, website/domain details, branding preferences,
+              images, logos, files, reviews or testimonials that you choose
+              to provide.
+            </p>
+
+            <p>
+              We may also receive basic technical information required to
+              operate and secure the website.
             </p>
           </Section>
 
-          <Section title="Why we collect it and our legal basis">
+          <Section title="How we use your information">
+            <p>We may use the information you provide to:</p>
+
+            <ul className="list-disc pl-5 space-y-2">
+              <li>respond to enquiries and requests;</li>
+              <li>discuss and prepare website projects and quotations;</li>
+              <li>provide website design and related services;</li>
+              <li>communicate with you about an ongoing project;</li>
+              <li>operate, maintain and secure our website;</li>
+              <li>keep appropriate business and accounting records; and</li>
+              <li>comply with applicable legal obligations.</li>
+            </ul>
+          </Section>
+
+          <Section title="Our legal basis for processing">
             <p>
-              We use this information to respond to your enquiry, to prepare
-              quotes, and to design and build the website you've asked for.
-              Our legal basis is that processing is necessary to take steps
-              at your request before entering into a contract, and to perform
-              that contract once you engage us (UK GDPR Article 6(1)(b)), or
-              your consent where you've explicitly agreed (e.g. the agreement
-              checkbox on the Client Information form).
+              Where applicable, we rely on one or more lawful bases under UK
+              data protection law, including taking steps at your request
+              before entering into a contract, performing a contract with you,
+              complying with legal obligations, our legitimate interests, or
+              your consent where consent is required.
             </p>
           </Section>
 
-          <Section title="How your information is submitted and stored">
+          <Section title="How information is submitted and stored">
             <p>
-              Form submissions on this site are handled by Netlify Forms, our
-              website hosting provider, which receives and stores submissions
-              (including uploaded files) on our behalf so we can read and
-              respond to them. Netlify acts as a data processor for this
-              information — see{" "}
+              Website form submissions are handled using Netlify, our hosting
+              and website service provider. Information submitted through our
+              forms may therefore be processed and stored by Netlify on our
+              behalf so that we can receive and respond to enquiries and
+              provide our services.
+            </p>
+
+            <p>
+              For information about how Netlify handles personal information,
+              please refer to{" "}
               <a
                 href="https://www.netlify.com/privacy/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand underline"
               >
-                Netlify's own privacy policy
-              </a>{" "}
-              for how they handle it.
+                Netlify's Privacy Policy
+              </a>
+              .
             </p>
+
             <p>
-              If you use "Save Progress" on the Client Information form, your
-              in-progress answers (not files) are stored only in your own
-              browser's local storage, on your device — we don't see this
-              until you actually submit the form.
+              If the Client Information form provides a "Save Progress"
+              feature, information saved before submission may be stored
+              locally in your own browser on your device. We do not receive
+              that saved information until you submit it to us.
             </p>
           </Section>
 
-          <Section title="Who we share it with">
+          <Section title="Who we share information with">
             <p>
-              We don't sell or rent your information. We may share it with
-              trusted service providers who help us run this website and
-              deliver our services (for example Netlify for hosting and form
-              handling), and only to the extent needed for that purpose.
+              We do not sell or rent your personal information.
+            </p>
+
+            <p>
+              We may share information with trusted service providers where
+              necessary to operate our website, receive form submissions,
+              provide our services, maintain business records, or comply with
+              legal obligations.
             </p>
           </Section>
 
-          <Section title="How long we keep it">
+          <Section title="International processing">
             <p>
-              We keep enquiry and client information for as long as needed to
-              respond to you, deliver the project, and meet any legal or
-              accounting obligations, and then delete it. [Add a specific
-              retention period here if you have one, e.g. "12 months after
-              project completion".]
+              Some service providers we use may process information outside
+              the United Kingdom. Where this happens, appropriate safeguards
+              will be used where required by applicable data protection law.
+            </p>
+          </Section>
+
+          <Section title="How long we keep information">
+            <p>
+              We keep personal information only for as long as reasonably
+              necessary for the purposes for which it was collected, including
+              responding to enquiries, providing services, maintaining
+              appropriate business records and meeting legal or accounting
+              requirements.
+            </p>
+
+            <p>
+              When information is no longer required, we will take reasonable
+              steps to securely delete or otherwise dispose of it, unless we
+              are required to keep it for longer by law.
             </p>
           </Section>
 
           <Section title="Your rights">
             <p>
-              Under UK data protection law you have the right to ask for a
-              copy of the information we hold about you, ask us to correct or
-              delete it, object to or restrict certain processing, and
-              complain to the Information Commissioner's Office (ICO) if
-              you're unhappy with how we've handled your data. To exercise
-              any of these, email{" "}
-              <a href="mailto:odwebsolutions1@gmail.com" className="text-brand underline">
+              Under UK data protection law, you may have rights including the
+              right to request access to personal information we hold about
+              you, ask us to correct inaccurate information, request deletion
+              in certain circumstances, object to or request restriction of
+              certain processing, and withdraw consent where processing is
+              based on consent.
+            </p>
+
+            <p>
+              To make a privacy request, contact us at{" "}
+              <a
+                href="mailto:odwebsolutions1@gmail.com"
+                className="text-brand underline"
+              >
                 odwebsolutions1@gmail.com
               </a>
               .
             </p>
-          </Section>
 
-          <Section title="Cookies and local storage">
             <p>
-              This site currently uses only strictly-necessary local storage
-              (to remember your form progress) and does not set tracking or
-              advertising cookies. If we add analytics tools in future, we
-              will only load them after you accept via the cookie banner, and
-              this section will list exactly what's used.
-            </p>
-            <p>
-              You can change your choice at any time by clearing your
-              browser's site data for this website, which will show the
-              cookie banner again on your next visit.
+              You also have the right to complain to the UK Information
+              Commissioner's Office (ICO) if you believe your personal
+              information has been handled unlawfully.
             </p>
           </Section>
 
-          <Section title="Changes to this policy">
+          <Section title="Cookies and similar technologies">
             <p>
-              We may update this policy from time to time. Changes will be
-              posted on this page with an updated "last updated" date.
+              Our website is not intended to use advertising or analytics
+              cookies unless this is clearly stated and, where required,
+              consent has been obtained.
+            </p>
+
+            <p>
+              The website may use strictly necessary browser storage or
+              similar technologies required for functionality, such as saving
+              progress in a form.
+            </p>
+
+            <p>
+              If we introduce non-essential cookies or tracking technologies
+              in the future, this Privacy Policy and our Cookie Policy will be
+              updated accordingly.
+            </p>
+          </Section>
+
+          <Section title="Security">
+            <p>
+              We take reasonable technical and organisational measures to
+              protect personal information against unauthorised access,
+              accidental loss, misuse, alteration or disclosure.
+            </p>
+
+            <p>
+              However, no method of transmitting or storing information
+              online can be guaranteed to be completely secure.
+            </p>
+          </Section>
+
+          <Section title="Third-party websites">
+            <p>
+              Our website may contain links to third-party websites or
+              services. We are not responsible for the privacy practices,
+              security or content of third-party websites. We recommend
+              checking their own privacy policies before providing personal
+              information.
+            </p>
+          </Section>
+
+          <Section title="Children's information">
+            <p>
+              Our services are intended for businesses and general website
+              visitors. We do not knowingly seek to collect personal
+              information from children.
+            </p>
+          </Section>
+
+          <Section title="Changes to this Privacy Policy">
+            <p>
+              We may update this Privacy Policy from time to time to reflect
+              changes to our services, website or legal requirements.
+            </p>
+
+            <p>
+              Any updated version will be published on this page with a new
+              "Last updated" date.
+            </p>
+          </Section>
+
+          <Section title="Contact us">
+            <p>
+              If you have a question about this Privacy Policy or how your
+              information is handled, contact:
+            </p>
+
+            <p>
+              <strong className="text-white/80">OD Web Solutions</strong>
+              <br />
+              Scotland
+              <br />
+              Email:{" "}
+              <a
+                href="mailto:odwebsolutions1@gmail.com"
+                className="text-brand underline"
+              >
+                odwebsolutions1@gmail.com
+              </a>
             </p>
           </Section>
         </div>
       </div>
+
       <Footer />
     </main>
   );
